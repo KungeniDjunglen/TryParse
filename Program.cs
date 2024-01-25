@@ -3,7 +3,7 @@
 class Program{
     static void Main(){
         int result;
-        if(!int.TryParse(Console.ReadLine(), out result)){
+        if(!TryParse(Console.ReadLine(), out result)){
             Console.WriteLine("Skriv en nuffra");
         }
         else{
@@ -12,12 +12,14 @@ class Program{
     }
     public static bool TryParse(string s, out int result)
     {
-        result = int.Parse(s);
-        if(result != null){
+
+        try{
+            result = int.Parse(s); 
             return true;
         }
-        else{
+        catch{
             return false;
         }
+        
     }
 }
