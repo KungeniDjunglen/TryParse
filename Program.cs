@@ -5,7 +5,7 @@ class Program{
         int result;
         if(!TryParse(Console.ReadLine(), out result)){
             Console.WriteLine("Skriv en nuffra");
-        }s
+        }
         else{
             Console.Write(result);
         }
